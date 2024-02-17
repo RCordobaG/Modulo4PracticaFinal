@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="30dp"
+tools:context=".RegistroActivity">
+
+<Button
+    android:id="@+id/registroBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Registrar"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+<RadioGroup
+    android:id="@+id/radioGroup"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:layout_marginBottom="20dp"
+    app:layout_constraintBottom_toTopOf="@+id/registroBtn"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <RadioButton
+        android:id="@+id/radioMale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Masculino" />
+
+    <RadioButton
+        android:id="@+id/radioFemale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Femenino" />
+
+    <RadioButton
+        android:id="@+id/radioOther"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Otro/Prefiero no decir" />
+</RadioGroup>
+
+<EditText
+    android:id="@+id/emailTxt"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginBottom="10dp"
+    android:ems="10"
+    android:hint="Correo electrónico"
+    android:inputType="textEmailAddress"
+    app:layout_constraintBottom_toTopOf="@+id/passwordTxt"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+<EditText
+    android:id="@+id/passwordTxt"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginBottom="30dp"
+    android:ems="10"
+    android:hint="Contraseña"
+    android:inputType="textPassword"
+    app:layout_constraintBottom_toTopOf="@+id/nombreTxt"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+<EditText
+    android:id="@+id/apellidoTxt"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginBottom="30dp"
+    android:ems="10"
+    android:hint="Apellido"
+    android:inputType="text"
+    app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+<EditText
+    android:id="@+id/nombreTxt"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginBottom="10dp"
+    android:ems="10"
+    android:hint="Nombre"
+    android:inputType="text"
+    app:layout_constraintBottom_toTopOf="@+id/apellidoTxt"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:text="Registro"
+    android:textSize="16sp"
+    app:layout_constraintBottom_toTopOf="@+id/emailTxt"
+    app:layout_constraintStart_toStartOf="parent" />
+
+<ImageView
+    android:id="@+id/imageView"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:srcCompat="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
