@@ -9,11 +9,11 @@ class getInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_get_info)
 
-        var extMail = intent.getStringExtra("email")
-        var extPass = intent.getStringExtra("pass")
-        var extName = intent.getStringExtra("name")
-        var extSurname = intent.getStringExtra("surname")
-        var extGender = intent.getStringExtra("gender")
+        var extMail = intent.getStringExtra("EXTRA_EMAIL")
+        var extPass = intent.getStringExtra("EXTRA_PASSWORD")
+        var extName = intent.getStringExtra("EXTRA_NAME")
+        var extSurname = intent.getStringExtra("EXTRA_SURNAME")
+        var extGender = intent.getStringExtra("EXTRA_GENDER")
 
 
 

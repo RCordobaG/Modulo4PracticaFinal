@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Modulo4PracticaFinal</string>
+    <string name="btnSendText">Iniciar sesion</string>
+    <string name="signUpText">¿No tienes cuenta? Registrate</string>
+    <string name="nameLabel">Nombre</string>
+    <string name="surnameLabel">Apellido</string>
+    <string name="genderLabel">Género</string>
+    <string name="emailLabel">Correo electrónico</string>
+    <string name="passwordLabel">Contraseña</string>
+    <string name="getInfoTitle">Datos recibidos</string>
+    <string name="emailHint">Correo electrónico</string>
+    <string name="passwordHint">Contraseña</string>
+    <string name="signUpLabel">Registrarse</string>
+    <string name="nameHint">Nombre</string>
+    <string name="surnameHint">Apellido</string>
+    <string name="signUpButton">Registrarse</string>
+    <string name="radioMale">Masculino</string>
+    <string name="radioFemale">Femenino</string>
+    <string name="radioOther">Otro/Prefiero no decir</string>
+</resources>

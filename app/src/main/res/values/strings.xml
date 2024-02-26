@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">Modulo4PracticaFinal</string>
-    <string name="btnSendText">Registrar</string>
+    <string name="btnSendText">Sign In</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="signUpText">Don\'t have an account? Sign Up</string>
+    <string name="AppName" translatable="false">Music app</string>
+    <string name="nameLabel">Name</string>
+    <string name="surnameLabel">Last name</string>
+    <string name="genderLabel">Gender</string>
+    <string name="emailLabel">Email</string>
+    <string name="passwordLabel">Password</string>
+    <string name="getInfoTitle">Received Data</string>
+    <string name="emailHint">Email</string>
+    <string name="passwordHint">Password</string>
+    <string name="signUpLabel">Sign Up</string>
+    <string name="nameHint">First Name</string>
+    <string name="surnameHint">Last Name</string>
+    <string name="signUpButton">Register</string>
+    <string name="radioMale">Male</string>
+    <string name="radioFemale">Female</string>
+    <string name="radioOther">Other/Prefer not to say</string>
 </resources>

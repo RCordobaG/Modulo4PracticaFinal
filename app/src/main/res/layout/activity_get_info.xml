@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="100dp"
-        android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/nameLabel"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -23,7 +22,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="60dp"
-        android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/surname_label"
         app:layout_constraintTop_toBottomOf="@+id/getName" />
 
@@ -33,7 +31,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="60dp"
-        android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/gender_label"
         app:layout_constraintTop_toBottomOf="@+id/getSurname" />
 
@@ -43,7 +40,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="60dp"
-        android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/email_label"
         app:layout_constraintTop_toBottomOf="@+id/getGender" />
 
@@ -53,7 +49,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="60dp"
-        android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/password_label"
         app:layout_constraintTop_toBottomOf="@+id/getEmail" />
 
@@ -62,7 +57,7 @@
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Nombre"
+        android:text="@string/nameLabel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -71,7 +66,7 @@
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Apellido"
+        android:text="@string/surnameLabel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
 
@@ -80,7 +75,7 @@
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Genero"
+        android:text="@string/genderLabel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/surname_label" />
 
@@ -89,7 +84,7 @@
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Email"
+        android:text="@string/emailLabel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gender_label" />
 
@@ -98,7 +93,7 @@
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Contraseña"
+        android:text="@string/passwordLabel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_label" />
 
@@ -107,7 +102,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Datos recibidos"
+        android:text="@string/getInfoTitle"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

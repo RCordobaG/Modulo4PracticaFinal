@@ -16,9 +16,6 @@
             android:name=".getInfoActivity"
             android:exported="false" />
         <activity
-            android:name=".RegistroActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
