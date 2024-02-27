@@ -2,10 +2,12 @@ package com.rodricorgom.modulo4practicafinal
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.rodricorgom.modulo4practicafinal.databinding.FragmentLoginBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -46,13 +48,30 @@ class FragmentLogin : Fragment() {
         var mail = binding.textEmail.text
         var pass = binding.textPassword.text
         binding.buttonSignIn.setOnClickListener{
-            val user = Usuario(mail.toString(),pass.toString())
-            val signInIntent = Intent(requireContext(),getInfoActivity::class.java).apply{
-                putExtra("EXTRA_EMAIL",user.email)
-                putExtra("EXTRA_PASSWORD",user.password)
-                putExtra("EXTRA_TYPE","SIGN_IN")
+            if(mail.isNotBlank() && pass.isNotBlank())
+            {
+                Log.println(Log.INFO,null,"User and mail set")
+                val user = Usuario(mail.toString(),pass.toString())
+                val signInIntent = Intent(requireContext(),getInfoActivity::class.java).apply{
+                    putExtra("EXTRA_EMAIL",user.email)
+                    putExtra("EXTRA_PASSWORD",user.password)
+                    putExtra("EXTRA_TYPE","USER_LOGIN")
+                }
+                startActivity(signInIntent)
             }
-            startActivity(signInIntent)
+
+            else
+            {
+                if(mail.isNullOrBlank())
+                {
+                    Toast.makeText(requireContext(),"Email can not be empty",Toast.LENGTH_SHORT).show()
+                }
+                if(pass.isBlank())
+                {
+                    Toast.makeText(requireContext(),"Password can not be empty",Toast.LENGTH_SHORT).show()
+
+                }
+            }
         }
         binding.registerText.setOnClickListener{
             val user = Usuario(mail.toString(),pass.toString())

@@ -19,4 +19,5 @@
     <string name="radioMale">Male</string>
     <string name="radioFemale">Female</string>
     <string name="radioOther">Other/Prefer not to say</string>
+    <string name="requestTypeLabel">Request type</string>
 </resources>

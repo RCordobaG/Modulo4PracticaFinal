@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
+import android.widget.Toast
+import androidx.core.view.isNotEmpty
 import androidx.fragment.app.Fragment
 import com.rodricorgom.modulo4practicafinal.databinding.FragmentSignUpBinding
 
@@ -57,23 +59,73 @@ class FragmentSignUp : Fragment() {
         var nombre = binding.nombreTxt.text
         var apellido = binding.apellidoTxt.text
         var genero = binding.radioGroup
+        var radioButton: RadioButton
 
 
-        registerBtn.setOnClickListener{
+        registerBtn.setOnClickListener {
             var genderId = genero.checkedRadioButtonId
-            val radioButton: RadioButton = binding.root.findViewById(genderId)
-            val radioButtonText = radioButton.text
-            var user = Usuario(correo.toString(),password.toString(),nombre.toString(),apellido.toString(),radioButtonText.toString())
-            val dataIntent = sendUserIntent.apply{
-                putExtra("EXTRA_EMAIL",user.email)
-                putExtra("EXTRA_PASSWORD",user.password)
-                putExtra("EXTRA_NAME",user.name)
-                putExtra("EXTRA_SURNAME",user.surname)
-                putExtra("EXTRA_GENDER",user.gender)
-            }
-            startActivity(dataIntent)
-        }
+            if (genderId == -1) {
+                Toast.makeText(
+                    requireContext(),
+                    "Please select an option for gender",
+                    Toast.LENGTH_LONG
+                ).show()
 
+            } else {
+                radioButton = binding.root.findViewById(genderId)
+
+                if (correo.isNotBlank() && password.isNotBlank() && nombre.isNotBlank() && apellido.isNotBlank()) {
+
+                    var user = Usuario(
+                        correo.toString(),
+                        password.toString(),
+                        nombre.toString(),
+                        apellido.toString(),
+                        radioButton.text.toString()
+                    )
+                    val dataIntent = sendUserIntent.apply {
+                        putExtra("EXTRA_EMAIL", user.email)
+                        putExtra("EXTRA_PASSWORD", user.password)
+                        putExtra("EXTRA_NAME", user.name)
+                        putExtra("EXTRA_SURNAME", user.surname)
+                        putExtra("EXTRA_GENDER", user.gender)
+                        putExtra("EXTRA_TYPE", "NEW_USER")
+
+                    }
+                    startActivity(dataIntent)
+                } else {
+                    if (correo.isBlank()) {
+                        Toast.makeText(requireContext(), "Please input an email", Toast.LENGTH_SHORT)
+                            .show()
+
+                    }
+                    if (password.isBlank()) {
+                        Toast.makeText(
+                            requireContext(),
+                            "Please enter a password",
+                            Toast.LENGTH_SHORT
+                        ).show()
+
+                    }
+                    if (nombre.isBlank()) {
+                        Toast.makeText(
+                            requireContext(),
+                            "Please enter your name",
+                            Toast.LENGTH_SHORT
+                        ).show()
+
+                    }
+                    if (apellido.isBlank()) {
+                        Toast.makeText(
+                            requireContext(),
+                            "Please enter yor surname",
+                            Toast.LENGTH_SHORT
+                        ).show()
+
+                    }
+                }
+            }
+        }
     }
 
     companion object {
